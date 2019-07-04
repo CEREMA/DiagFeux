@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp1 U (http://www.altova.com) by André VIGNAUD (CETE DE L'OUEST) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by VIGNAUD (CETE OUEST) -->
+<xs:schema xmlns="http://cete.fr/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" targetNamespace="http://cete.fr/namespace" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="SchémaACONDIA">
+		<xs:annotation>
+			<xs:documentation>Schéma ACONDIA</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Paramétrage"/>
+				<xs:element name="ParamFixe" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="VertMini" type="xs:short" default="6"/>
+							<xs:element name="VertMiniVeh" type="xs:short" default="6"/>
+							<xs:element name="JauneAgglo" type="xs:short" default="3"/>
+							<xs:element name="JauneHorsAgglo" type="xs:short" default="5"/>
+							<xs:element name="EqvUVP2R" type="xs:decimal" default="0.3"/>
+							<xs:element name="EqvUVPPL" type="xs:short" default="2"/>
+							<xs:element name="MiniRouge" type="xs:short" default="5"/>
+							<xs:element name="TempsPerdu" type="xs:short" default="5"/>
+							<xs:element name="TempsMaxAttente" default="120">
+								<xs:simpleType>
+									<xs:restriction base="xs:short">
+										<xs:minExclusive value="0"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TableCycleCapacité" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DuréeCycle" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DemandeCarrefour" type="xs:short" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="DuréeCycleMini" type="xs:short" use="required"/>
+						<xs:attribute name="TempsPerduMini" type="xs:short" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="Carrefour" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DXF"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Branche">
+		<xs:annotation>
+			<xs:documentation>Schéma ACONDIA</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Angle" type="xs:short"/>
+				<xs:element name="LargeurVoies" type="xs:float"/>
+				<xs:element name="Longueur" type="xs:short" default="25"/>
+				<xs:element name="Ilot" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Largeur" type="xs:float"/>
+							<xs:element name="Rayon" type="xs:float"/>
+							<xs:element name="Décalage" type="xs:float"/>
+							<xs:element name="Retrait" type="xs:float"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="Voie" maxOccurs="unbounded"/>
+				<xs:element name="NomRue" type="xs:string" minOccurs="0"/>
+				<xs:element name="ptFlechesTrafic" type="Point" minOccurs="0"/>
+				<xs:element name="Origine" type="PointF">
+					<xs:annotation>
+						<xs:documentation>Origine relative par rapport à l'origine du carrefour</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Passage" minOccurs="0" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LigneDeFeux">
+		<xs:annotation>
+			<xs:documentation>Schéma ACONDIA</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ID" type="xs:string"/>
+				<xs:element name="Signal">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="Point">
+								<xs:attribute name="strCode" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RougeDégagement" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:short">
+								<xs:attribute name="IDAdverse" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Incompatible" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="IDAdverse" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="NumBranche" type="xs:short"/>
+				<xs:element name="Décalage" type="xs:float" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Décalage de la ligne de feu par rapport à l'origine de la branche.
+Inutilisé dans le mode non graphique</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="NbVoies" type="xs:short" minOccurs="0"/>
+				<xs:element name="NumVoie1" type="xs:short" default="0" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indice de la voie coupée par la ligne de feux la plus à droite.
+Utile en particulier s'il y a une phase spéciale pour le TAG.
+</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SignalAnticipation" type="xs:string" minOccurs="0"/>
+				<xs:element name="TAD" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="TAG" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="TD" type="xs:boolean" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Point">
+		<xs:annotation>
+			<xs:documentation>Schéma ACONDIA</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="X" type="xs:short"/>
+			<xs:element name="Y" type="xs:short"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PointF">
+		<xs:annotation>
+			<xs:documentation>Schéma ACONDIA</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="X" type="xs:float"/>
+			<xs:element name="Y" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Voie">
+		<xs:annotation>
+			<xs:documentation>Indique si la voie est entranteNuméro d'ordre le la voie sur la branche à partir de la droite</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:short">
+					<xs:attribute name="Entrante" type="xs:boolean" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Trajectoire">
+		<xs:annotation>
+			<xs:documentation>Schéma ACONDIA</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Piétons" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Traversée piétonne</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IDP1" type="xs:short">
+								<xs:annotation>
+									<xs:documentation>Identifiant unioque dans la variante du passage piéton</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="IDP2" type="xs:short" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Véhicules" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Ttajectoire véhicules</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="VoieOrigine" type="xs:short">
+								<xs:annotation>
+									<xs:documentation>Identifiant correspondant à l'ID spécifié dans l'objet VOIE</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="VoieDestination" type="xs:short">
+								<xs:annotation>
+									<xs:documentation>Identifiant correspondant à l'ID spécifié dans l'objet VOIE</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="TypeCourant">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="MIXTE"/>
+										<xs:enumeration value="TC"/>
+										<xs:enumeration value="2R"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="NatureCourant">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="TAD"/>
+										<xs:enumeration value="TAG"/>
+										<xs:enumeration value="TD"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="CoefGene" type="xs:float"/>
+							<xs:element name="PointManuel" type="PointF" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Points intermédiaires définis manuellement en coordonnées réelles</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="IDLigneDeFeux" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Passage">
+		<xs:annotation>
+			<xs:documentation>Identifiant unique pour la variante</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Point" type="PointF" minOccurs="4" maxOccurs="4"/>
+				<xs:element name="VoieIntersectee" type="xs:short" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Identifiant correspondant à l'ID spécifié dans l'objet VOIE</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Variante">
+		<xs:annotation>
+			<xs:documentation>Schéma ACONDIA</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ModeGraphique" type="xs:boolean"/>
+				<xs:element name="ParamDessin" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Echelle" type="xs:float"/>
+							<xs:element name="OrigineReelle" type="PointF"/>
+							<xs:element name="Taille" type="Point"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Affichage" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Nord" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="pNord" type="Point"/>
+										<xs:element name="Rotation" type="xs:float"/>
+										<xs:element name="Visible" type="xs:boolean"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SymEchelle" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="pSymEchelle" type="Point"/>
+										<xs:element name="Visible" type="xs:boolean"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SensTrajectoires" type="xs:boolean" minOccurs="0"/>
+							<xs:element name="SensCirculation" type="xs:boolean" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Verrou" type="xs:short">
+					<xs:annotation>
+						<xs:documentation>Enumérateur indiquant l'étape de verrouillage</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="FondPlan" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Nom" type="xs:string"/>
+							<xs:element name="Echelle" type="xs:short"/>
+							<xs:element name="EstDXF" type="xs:boolean"/>
+							<xs:element name="Rotation" type="xs:short" minOccurs="0"/>
+							<xs:element name="MonDXF">
+								<xs:complexType>
+									<xs:attribute name="ds"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="Branche" minOccurs="3" maxOccurs="6"/>
+				<xs:element ref="LigneDeFeux" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Trajectoire" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Antagonisme" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Trajectoire1" type="xs:short"/>
+							<xs:element name="Trajectoire2" type="xs:short"/>
+							<xs:element name="TypeConflit" type="xs:short"/>
+							<xs:element name="pAntago" type="PointF"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="PlanFeux" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Trafic" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="VertMiniVéhicules" type="xs:short" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>A priori non redéfinissable</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="VertMiniPiétons" type="xs:short" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="PlanFeuxCourant" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Phase">
+		<xs:annotation>
+			<xs:documentation>Schéma ACONDIA</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Durée" type="xs:short" default="60"/>
+				<xs:element name="IDLigneFeux" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Correspond à la propriété ID d'une ligne de feux</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="DécalageOuvre" type="xs:short" use="optional"/>
+								<xs:attribute name="DécalageFerme" type="xs:short" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Verrouillée" type="xs:boolean" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PlanFeux">
+		<xs:annotation>
+			<xs:documentation>Pour un plan de fonctionnement, l'ID est celui du plan de feux de base associé, sinon l'ID propre du plan de feux</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NomFonctionnement" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Si non renseigné, indique un plan de feux de base</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="VerrouPlan" type="xs:short" minOccurs="0"/>
+				<xs:element ref="Phase" minOccurs="2" maxOccurs="3"/>
+				<xs:element name="IDLigneFeuxComposé" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Correspond à la propriété ID d'une ligne de feux : en général vide sauf carrefour composé</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="OrdreLignes" type="xs:string" maxOccurs="unbounded"/>
+				<xs:element name="Incompatibles" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="IdLfInc1" type="xs:string"/>
+						<xs:attribute name="IdLfInc2" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RougesDégagement" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:short">
+								<xs:attribute name="IdLfRouge1" type="xs:string"/>
+								<xs:attribute name="IdLfRouge2" type="xs:string"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TypesConflit" type="xs:short" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="VertMiniVéhiculesPlan" type="xs:short" minOccurs="0"/>
+				<xs:element name="VertMiniPiétonsPlan" type="xs:short" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:string" use="optional"/>
+			<xs:attribute name="IDTrafic" type="xs:short" use="optional"/>
+			<xs:attribute name="Définitif" type="xs:boolean"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Trafic">
+		<xs:annotation>
+			<xs:documentation>Schéma ACONDIA</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Nom" type="xs:string"/>
+				<xs:element name="UVP" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="QPiéton" type="xs:short" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Trafic Piéton sur une branche</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="QVéhicule" type="xs:short" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Trafic véhicules d'une branche vers une autre</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TraficComment" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Commentaire sur la période</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Verrouillé" type="xs:boolean"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Paramétrage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Organisme" type="xs:string"/>
+				<xs:element name="Service" type="xs:string"/>
+				<xs:element name="Stockage" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Chemin du dossier de stockage des projets</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Logo" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Chemin du fichier logo du service</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="VitessePiétons" type="xs:decimal" default="1" msdata:Caption="Vitesse dégagement piétons"/>
+				<xs:element name="VitesseVéhicules" default="10" msdata:Caption="Vitesse dégagement véhicules">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:minExclusive value="0"/>
+							<xs:maxInclusive value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="VitesseVélos" default="10" msdata:Caption="Vitesse dégagement vélos">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:minExclusive value="0"/>
+							<xs:maxInclusive value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="DébitSaturation" type="xs:short"/>
+				<xs:element name="TempsPerduDémarrage" type="xs:short" default="0" nillable="true"/>
+				<xs:element name="TempsPerduDémarrageCampagne" type="xs:short" nillable="true"/>
+				<xs:element name="JauneInutiliséAgglo" type="xs:short" default="3" nillable="true"/>
+				<xs:element name="JauneInutiliséCampagne" type="xs:short" default="5" nillable="true"/>
+				<xs:element name="SignalPiétonsSonore" type="xs:boolean" nillable="true"/>
+			</xs:sequence>
+			<xs:attribute name="Version" type="xs:short" default="0"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AttribuGraphique">
+		<xs:sequence>
+			<xs:element name="Couleur" type="xs:long"/>
+			<xs:element name="TypeLign" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DXF">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Calque" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Attributs</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="AttribuGraphique">
+								<xs:attribute name="Nom" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Bloc" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LIGNE" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="AttribuGraphique">
+											<xs:sequence>
+												<xs:element name="NomCalque" type="xs:string"/>
+												<xs:element name="PA" type="PointF" minOccurs="2" maxOccurs="2"/>
+											</xs:sequence>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ARC" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="AttribuGraphique">
+											<xs:sequence>
+												<xs:element name="NomCalque" type="xs:string"/>
+												<xs:element name="CentreArc" type="PointF"/>
+												<xs:element name="Rayon" type="xs:float"/>
+												<xs:element name="AngleDépart" type="xs:float"/>
+												<xs:element name="AngleBalayage" type="xs:float"/>
+											</xs:sequence>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="CERCLE" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="AttribuGraphique">
+											<xs:sequence>
+												<xs:element name="NomCalque" type="xs:string"/>
+												<xs:element name="CentreCercle" type="PointF"/>
+												<xs:element name="Rayon" type="xs:float"/>
+											</xs:sequence>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="POLYARC" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="AttribuGraphique">
+											<xs:sequence>
+												<xs:element name="NomCalque" type="xs:string"/>
+												<xs:element name="PI" type="Pt" minOccurs="3" maxOccurs="unbounded"/>
+											</xs:sequence>
+											<xs:attribute name="Clore" type="xs:boolean"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SPLINE" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="AttribuGraphique">
+											<xs:sequence>
+												<xs:element name="NomCalque" type="xs:string"/>
+												<xs:element name="PtDessiné" type="PointF" minOccurs="2" maxOccurs="unbounded"/>
+											</xs:sequence>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="INSERT" minOccurs="0" maxOccurs="8">
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="AttribuGraphique">
+											<xs:sequence>
+												<xs:element name="NomCalque" type="xs:string"/>
+												<xs:element name="NomBloc" type="xs:string"/>
+												<xs:element name="pInsertion" type="PointF"/>
+												<xs:element name="Echelle" type="xs:float" minOccurs="0"/>
+												<xs:element name="Rotation" type="xs:float" minOccurs="0"/>
+											</xs:sequence>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Nom" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Limites">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="pMin" type="PointF"/>
+							<xs:element name="pMax" type="PointF"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Nom" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Pt">
+		<xs:sequence>
+			<xs:element name="P" type="PointF"/>
+			<xs:element name="Arrondi" type="xs:float" minOccurs="0"/>
+			<xs:element name="Drapeau" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Carrefour">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Variante" maxOccurs="unbounded"/>
+				<xs:element name="Propriétés">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NbBranches" default="4">
+								<xs:simpleType>
+									<xs:restriction base="xs:short">
+										<xs:minInclusive value="3"/>
+										<xs:maxInclusive value="6"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Nom" type="xs:string"/>
+							<xs:element name="Commune"/>
+							<xs:element name="EnAgglo" type="xs:boolean"/>
+							<xs:element name="ZoneRégulation" minOccurs="0"/>
+							<xs:element name="Commentaires" minOccurs="0"/>
+							<xs:element name="TypeControleur" minOccurs="0"/>
+							<xs:element name="Fabricant" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Fabricant du controleur</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="DateControleur" type="xs:date" minOccurs="0"/>
+							<xs:element name="CarrefourType"/>
+							<xs:element name="Centre" type="PointF" minOccurs="0"/>
+							<xs:element name="Numéro" type="xs:string" minOccurs="0"/>
+							<xs:element name="PremierService" type="xs:date" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Date de première mise en service</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="CoordonnéesService" type="xs:string" minOccurs="0"/>
+							<xs:element name="SuperviseurTravaux" type="xs:string" minOccurs="0"/>
+							<xs:element name="DateEtude" type="xs:date" minOccurs="0"/>
+							<xs:element name="RéalisateurEtude" type="xs:string" minOccurs="0"/>
+							<xs:element name="ObjectifEtude" type="xs:string" minOccurs="0"/>
+							<xs:element name="OrigineVisa" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Nom et qualité du délivreur de visa</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="NuméroVisa" type="xs:string" minOccurs="0"/>
+							<xs:element name="VisaTrafics" type="xs:string" minOccurs="0"/>
+							<xs:element name="DateService" type="xs:date" minOccurs="0"/>
+							<xs:element name="DateModification" type="xs:date" minOccurs="0"/>
+							<xs:element name="DateModifPlageHoraire" type="xs:date" minOccurs="0"/>
+							<xs:element name="NumVersion" type="xs:string" minOccurs="0"/>
+							<xs:element name="DateVersion" type="xs:date" minOccurs="0"/>
+							<xs:element name="SystèmeRégulation" type="xs:string" minOccurs="0"/>
+							<xs:element name="EnchainementPhases" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

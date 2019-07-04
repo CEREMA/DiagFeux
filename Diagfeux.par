@@ -1,0 +1,639 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetDiagfeux xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cete.fr/namespace">
+  <xs:schema id="DataSetDiagfeux" targetNamespace="http://cete.fr/namespace" xmlns:mstns="http://cete.fr/namespace" xmlns="http://cete.fr/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DataSetDiagfeux" msdata:IsDataSet="true" msdata:Locale="fr-FR">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="SchémaACONDIA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Paramétrage" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Organisme" type="xs:string" msdata:Ordinal="1" />
+                      <xs:element name="Service" type="xs:string" msdata:Ordinal="2" />
+                      <xs:element name="Stockage" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+                      <xs:element name="Logo" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+                      <xs:element name="VitessePiétons" msdata:Caption="Vitesse dégagement piétons" type="xs:decimal" default="1" msdata:Ordinal="5" />
+                      <xs:element name="VitesseVéhicules" msdata:Caption="Vitesse dégagement véhicules" type="xs:decimal" default="10" msdata:Ordinal="6" />
+                      <xs:element name="VitesseVélos" msdata:Caption="Vitesse dégagement vélos" type="xs:decimal" default="10" msdata:Ordinal="7" />
+                      <xs:element name="DébitSaturation" type="xs:short" msdata:Ordinal="8" />
+                      <xs:element name="TempsPerduDémarrage" type="xs:short" default="0" minOccurs="0" msdata:Ordinal="9" />
+                      <xs:element name="TempsPerduDémarrageCampagne" type="xs:short" minOccurs="0" msdata:Ordinal="10" />
+                      <xs:element name="JauneInutiliséAgglo" type="xs:short" default="3" minOccurs="0" msdata:Ordinal="11" />
+                      <xs:element name="JauneInutiliséCampagne" type="xs:short" default="5" minOccurs="0" msdata:Ordinal="12" />
+                      <xs:element name="SignalPiétonsSonore" type="xs:boolean" minOccurs="0" msdata:Ordinal="13" />
+                    </xs:sequence>
+                    <xs:attribute name="Version" form="unqualified" type="xs:short" default="0" />
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="ParamFixe" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="VertMini" type="xs:short" default="6" />
+                      <xs:element name="VertMiniVeh" type="xs:short" default="6" />
+                      <xs:element name="JauneAgglo" type="xs:short" default="3" />
+                      <xs:element name="JauneHorsAgglo" type="xs:short" default="5" />
+                      <xs:element name="EqvUVP2R" type="xs:decimal" default="0.3" />
+                      <xs:element name="EqvUVPPL" type="xs:short" default="2" />
+                      <xs:element name="MiniRouge" type="xs:short" default="5" />
+                      <xs:element name="TempsPerdu" type="xs:short" default="5" />
+                      <xs:element name="TempsMaxAttente" type="xs:short" default="120" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="TableCycleCapacité" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="DuréeCycle" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="DemandeCarrefour" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:simpleContent msdata:ColumnName="DemandeCarrefour_Column" msdata:Ordinal="0">
+                                  <xs:extension base="xs:short">
+                                  </xs:extension>
+                                </xs:simpleContent>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="DuréeCycleMini" form="unqualified" type="xs:short" use="required" />
+                    <xs:attribute name="TempsPerduMini" form="unqualified" type="xs:short" use="required" />
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="Carrefour" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Variante" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="ModeGraphique" type="xs:boolean" msdata:Ordinal="1" />
+                            <xs:element name="Verrou" type="xs:short" msdata:Ordinal="2" />
+                            <xs:element name="VertMiniVéhicules" type="xs:short" minOccurs="0" msdata:Ordinal="3" />
+                            <xs:element name="VertMiniPiétons" type="xs:short" minOccurs="0" msdata:Ordinal="4" />
+                            <xs:element name="ParamDessin" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Echelle" type="xs:float" />
+                                  <xs:element name="OrigineReelle" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:float" />
+                                        <xs:element name="Y" type="xs:float" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="Taille" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:short" />
+                                        <xs:element name="Y" type="xs:short" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Affichage" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="SensTrajectoires" type="xs:boolean" minOccurs="0" />
+                                  <xs:element name="SensCirculation" type="xs:boolean" minOccurs="0" />
+                                  <xs:element name="Nord" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="Rotation" type="xs:float" />
+                                        <xs:element name="Visible" type="xs:boolean" />
+                                        <xs:element name="pNord" minOccurs="0" maxOccurs="unbounded">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element name="X" type="xs:short" />
+                                              <xs:element name="Y" type="xs:short" />
+                                            </xs:sequence>
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="SymEchelle" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="Visible" type="xs:boolean" />
+                                        <xs:element name="pSymEchelle" minOccurs="0" maxOccurs="unbounded">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element name="X" type="xs:short" />
+                                              <xs:element name="Y" type="xs:short" />
+                                            </xs:sequence>
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="FondPlan" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Nom" type="xs:string" />
+                                  <xs:element name="Echelle" type="xs:short" />
+                                  <xs:element name="EstDXF" type="xs:boolean" />
+                                  <xs:element name="Rotation" type="xs:short" minOccurs="0" />
+                                  <xs:element name="MonDXF" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:attribute name="ds" form="unqualified" type="xs:string" />
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Branche" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Angle" type="xs:short" />
+                                  <xs:element name="LargeurVoies" type="xs:float" />
+                                  <xs:element name="Longueur" type="xs:short" default="25" />
+                                  <xs:element name="NomRue" type="xs:string" minOccurs="0" />
+                                  <xs:element name="Ilot" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="Largeur" type="xs:float" />
+                                        <xs:element name="Rayon" type="xs:float" />
+                                        <xs:element name="Décalage" type="xs:float" />
+                                        <xs:element name="Retrait" type="xs:float" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="Voie" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:simpleContent msdata:ColumnName="Voie_text" msdata:Ordinal="1">
+                                        <xs:extension base="xs:short">
+                                          <xs:attribute name="Entrante" form="unqualified" type="xs:boolean" use="required" />
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="ptFlechesTrafic" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:short" />
+                                        <xs:element name="Y" type="xs:short" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="Origine" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:float" />
+                                        <xs:element name="Y" type="xs:float" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="Passage" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="Point" minOccurs="0" maxOccurs="unbounded">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element name="X" type="xs:float" />
+                                              <xs:element name="Y" type="xs:float" />
+                                            </xs:sequence>
+                                          </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="VoieIntersectee" minOccurs="0" maxOccurs="unbounded">
+                                          <xs:complexType>
+                                            <xs:simpleContent msdata:ColumnName="VoieIntersectee_Column" msdata:Ordinal="0">
+                                              <xs:extension base="xs:short">
+                                              </xs:extension>
+                                            </xs:simpleContent>
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="LigneDeFeux" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="ID" type="xs:string" />
+                                  <xs:element name="NumBranche" type="xs:short" />
+                                  <xs:element name="Décalage" type="xs:float" minOccurs="0" />
+                                  <xs:element name="NbVoies" type="xs:short" minOccurs="0" />
+                                  <xs:element name="NumVoie1" type="xs:short" default="0" minOccurs="0" />
+                                  <xs:element name="SignalAnticipation" type="xs:string" minOccurs="0" />
+                                  <xs:element name="TAD" type="xs:boolean" minOccurs="0" />
+                                  <xs:element name="TAG" type="xs:boolean" minOccurs="0" />
+                                  <xs:element name="TD" type="xs:boolean" minOccurs="0" />
+                                  <xs:element name="Signal" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:short" msdata:Ordinal="1" />
+                                        <xs:element name="Y" type="xs:short" msdata:Ordinal="2" />
+                                      </xs:sequence>
+                                      <xs:attribute name="strCode" form="unqualified" type="xs:string" use="required" />
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="RougeDégagement" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:simpleContent msdata:ColumnName="RougeDégagement_text" msdata:Ordinal="1">
+                                        <xs:extension base="xs:short">
+                                          <xs:attribute name="IDAdverse" form="unqualified" type="xs:string" use="required" />
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="Incompatible" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:attribute name="IDAdverse" form="unqualified" type="xs:string" use="required" />
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Trajectoire" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Piétons" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="IDP1" type="xs:short" />
+                                        <xs:element name="IDP2" type="xs:short" minOccurs="0" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="Véhicules" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="VoieOrigine" type="xs:short" />
+                                        <xs:element name="VoieDestination" type="xs:short" />
+                                        <xs:element name="TypeCourant" type="xs:string" />
+                                        <xs:element name="NatureCourant" type="xs:string" />
+                                        <xs:element name="CoefGene" type="xs:float" />
+                                        <xs:element name="PointManuel" minOccurs="0" maxOccurs="unbounded">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element name="X" type="xs:float" />
+                                              <xs:element name="Y" type="xs:float" />
+                                            </xs:sequence>
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="IDLigneDeFeux" form="unqualified" type="xs:string" />
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Antagonisme" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Trajectoire1" type="xs:short" />
+                                  <xs:element name="Trajectoire2" type="xs:short" />
+                                  <xs:element name="TypeConflit" type="xs:short" />
+                                  <xs:element name="pAntago" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:float" />
+                                        <xs:element name="Y" type="xs:float" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PlanFeux" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="NomFonctionnement" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+                                  <xs:element name="VerrouPlan" type="xs:short" minOccurs="0" msdata:Ordinal="4" />
+                                  <xs:element name="VertMiniVéhiculesPlan" type="xs:short" minOccurs="0" msdata:Ordinal="5" />
+                                  <xs:element name="VertMiniPiétonsPlan" type="xs:short" minOccurs="0" msdata:Ordinal="6" />
+                                  <xs:element name="Phase" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="Durée" type="xs:short" default="60" />
+                                        <xs:element name="Verrouillée" type="xs:boolean" minOccurs="0" />
+                                        <xs:element name="IDLigneFeux" minOccurs="0" maxOccurs="unbounded">
+                                          <xs:complexType>
+                                            <xs:simpleContent msdata:ColumnName="IDLigneFeux_text" msdata:Ordinal="2">
+                                              <xs:extension base="xs:string">
+                                                <xs:attribute name="DécalageOuvre" form="unqualified" type="xs:short" />
+                                                <xs:attribute name="DécalageFerme" form="unqualified" type="xs:short" />
+                                              </xs:extension>
+                                            </xs:simpleContent>
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="IDLigneFeuxComposé" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:simpleContent msdata:ColumnName="IDLigneFeuxComposé_Column" msdata:Ordinal="0">
+                                        <xs:extension base="xs:string">
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="OrdreLignes" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:simpleContent msdata:ColumnName="OrdreLignes_Column" msdata:Ordinal="0">
+                                        <xs:extension base="xs:string">
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="Incompatibles" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:attribute name="IdLfInc1" form="unqualified" type="xs:string" />
+                                      <xs:attribute name="IdLfInc2" form="unqualified" type="xs:string" />
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="RougesDégagement" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:simpleContent msdata:ColumnName="RougesDégagement_text" msdata:Ordinal="2">
+                                        <xs:extension base="xs:short">
+                                          <xs:attribute name="IdLfRouge1" form="unqualified" type="xs:string" />
+                                          <xs:attribute name="IdLfRouge2" form="unqualified" type="xs:string" />
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="TypesConflit" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:simpleContent msdata:ColumnName="TypesConflit_Column" msdata:Ordinal="0">
+                                        <xs:extension base="xs:short">
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="ID" form="unqualified" type="xs:string" />
+                                <xs:attribute name="IDTrafic" form="unqualified" type="xs:short" />
+                                <xs:attribute name="Définitif" form="unqualified" type="xs:boolean" />
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Trafic" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Nom" type="xs:string" msdata:Ordinal="1" />
+                                  <xs:element name="UVP" type="xs:boolean" minOccurs="0" msdata:Ordinal="2" />
+                                  <xs:element name="TraficComment" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+                                  <xs:element name="QPiéton" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:simpleContent msdata:ColumnName="QPiéton_Column" msdata:Ordinal="0">
+                                        <xs:extension base="xs:short">
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element name="QVéhicule" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:simpleContent msdata:ColumnName="QVéhicule_Column" msdata:Ordinal="0">
+                                        <xs:extension base="xs:short">
+                                        </xs:extension>
+                                      </xs:simpleContent>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="Verrouillé" form="unqualified" type="xs:boolean" />
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                          <xs:attribute name="PlanFeuxCourant" form="unqualified" type="xs:string" />
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Propriétés" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="NbBranches" type="xs:short" default="4" />
+                            <xs:element name="Nom" type="xs:string" />
+                            <xs:element name="Commune" type="xs:string" />
+                            <xs:element name="EnAgglo" type="xs:boolean" />
+                            <xs:element name="ZoneRégulation" type="xs:string" minOccurs="0" />
+                            <xs:element name="Commentaires" type="xs:string" minOccurs="0" />
+                            <xs:element name="TypeControleur" type="xs:string" minOccurs="0" />
+                            <xs:element name="Fabricant" type="xs:string" minOccurs="0" />
+                            <xs:element name="DateControleur" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="CarrefourType" type="xs:string" />
+                            <xs:element name="Numéro" type="xs:string" minOccurs="0" />
+                            <xs:element name="PremierService" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="CoordonnéesService" type="xs:string" minOccurs="0" />
+                            <xs:element name="SuperviseurTravaux" type="xs:string" minOccurs="0" />
+                            <xs:element name="DateEtude" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="RéalisateurEtude" type="xs:string" minOccurs="0" />
+                            <xs:element name="ObjectifEtude" type="xs:string" minOccurs="0" />
+                            <xs:element name="OrigineVisa" type="xs:string" minOccurs="0" />
+                            <xs:element name="NuméroVisa" type="xs:string" minOccurs="0" />
+                            <xs:element name="VisaTrafics" type="xs:string" minOccurs="0" />
+                            <xs:element name="DateService" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="DateModification" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="DateModifPlageHoraire" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="NumVersion" type="xs:string" minOccurs="0" />
+                            <xs:element name="DateVersion" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="SystèmeRégulation" type="xs:string" minOccurs="0" />
+                            <xs:element name="EnchainementPhases" type="xs:string" minOccurs="0" />
+                            <xs:element name="Centre" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="X" type="xs:float" />
+                                  <xs:element name="Y" type="xs:float" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="DXF" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Calque" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="Couleur" type="xs:long" msdata:Ordinal="1" />
+                            <xs:element name="TypeLign" type="xs:string" msdata:Ordinal="2" />
+                          </xs:sequence>
+                          <xs:attribute name="Nom" form="unqualified" type="xs:string" use="required" />
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Bloc" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="LIGNE" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Couleur" type="xs:long" />
+                                  <xs:element name="TypeLign" type="xs:string" />
+                                  <xs:element name="NomCalque" type="xs:string" />
+                                  <xs:element name="PA" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:float" />
+                                        <xs:element name="Y" type="xs:float" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ARC" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Couleur" type="xs:long" />
+                                  <xs:element name="TypeLign" type="xs:string" />
+                                  <xs:element name="NomCalque" type="xs:string" />
+                                  <xs:element name="Rayon" type="xs:float" />
+                                  <xs:element name="AngleDépart" type="xs:float" />
+                                  <xs:element name="AngleBalayage" type="xs:float" />
+                                  <xs:element name="CentreArc" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:float" />
+                                        <xs:element name="Y" type="xs:float" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="CERCLE" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Couleur" type="xs:long" />
+                                  <xs:element name="TypeLign" type="xs:string" />
+                                  <xs:element name="NomCalque" type="xs:string" />
+                                  <xs:element name="Rayon" type="xs:float" />
+                                  <xs:element name="CentreCercle" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:float" />
+                                        <xs:element name="Y" type="xs:float" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="POLYARC" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Couleur" type="xs:long" msdata:Ordinal="1" />
+                                  <xs:element name="TypeLign" type="xs:string" msdata:Ordinal="2" />
+                                  <xs:element name="NomCalque" type="xs:string" msdata:Ordinal="3" />
+                                  <xs:element name="PI" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="Arrondi" type="xs:float" minOccurs="0" />
+                                        <xs:element name="Drapeau" type="xs:int" minOccurs="0" />
+                                        <xs:element name="P" minOccurs="0" maxOccurs="unbounded">
+                                          <xs:complexType>
+                                            <xs:sequence>
+                                              <xs:element name="X" type="xs:float" />
+                                              <xs:element name="Y" type="xs:float" />
+                                            </xs:sequence>
+                                          </xs:complexType>
+                                        </xs:element>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="Clore" form="unqualified" type="xs:boolean" />
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="SPLINE" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Couleur" type="xs:long" />
+                                  <xs:element name="TypeLign" type="xs:string" />
+                                  <xs:element name="NomCalque" type="xs:string" />
+                                  <xs:element name="PtDessiné" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:float" />
+                                        <xs:element name="Y" type="xs:float" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="INSERT" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="Couleur" type="xs:long" />
+                                  <xs:element name="TypeLign" type="xs:string" />
+                                  <xs:element name="NomCalque" type="xs:string" />
+                                  <xs:element name="NomBloc" type="xs:string" />
+                                  <xs:element name="Echelle" type="xs:float" minOccurs="0" />
+                                  <xs:element name="Rotation" type="xs:float" minOccurs="0" />
+                                  <xs:element name="pInsertion" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="X" type="xs:float" />
+                                        <xs:element name="Y" type="xs:float" />
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                          <xs:attribute name="Nom" form="unqualified" type="xs:string" />
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Limites" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="pMin" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="X" type="xs:float" />
+                                  <xs:element name="Y" type="xs:float" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="pMax" minOccurs="0" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="X" type="xs:float" />
+                                  <xs:element name="Y" type="xs:float" />
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="Nom" form="unqualified" type="xs:string" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Paramétrage Version="3">
+    <Organisme>fffffff</Organisme>
+    <Service>ffffff</Service>
+    <Stockage>D:\LOG_DiagFeux\DiagFeux.ex_</Stockage>
+    <VitessePiétons>1</VitessePiétons>
+    <VitesseVéhicules>10</VitesseVéhicules>
+    <VitesseVélos>10</VitesseVélos>
+    <DébitSaturation>1800</DébitSaturation>
+    <TempsPerduDémarrage>0</TempsPerduDémarrage>
+    <TempsPerduDémarrageCampagne>0</TempsPerduDémarrageCampagne>
+    <JauneInutiliséAgglo>3</JauneInutiliséAgglo>
+    <JauneInutiliséCampagne>5</JauneInutiliséCampagne>
+    <SignalPiétonsSonore>false</SignalPiétonsSonore>
+  </Paramétrage>
+</DataSetDiagfeux>

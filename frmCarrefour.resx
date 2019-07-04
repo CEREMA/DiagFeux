@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AC1GrilleIlot.ColumnInfo" xml:space="preserve">
+    <value>5,1,0,0,0,85,Columns:0{Width:15;Name:"ID";AllowEditing:False;DataType:System.String;TextAlign:LeftCenter;}	1{Width:51;Name:"Rayon";Caption:"Rayon";DataType:System.Single;TextAlign:RightCenter;TextAlignFixed:CenterCenter;ImageAlign:RightCenter;}	2{Width:51;Name:"Décalage";Caption:"Décalage";DataType:System.Single;TextAlign:RightCenter;TextAlignFixed:CenterCenter;ImageAlign:RightCenter;}	3{Width:51;Name:"Largeur";Caption:"Largeur";DataType:System.Single;TextAlign:RightCenter;TextAlignFixed:CenterCenter;}	4{Width:51;Name:"Retrait";Caption:"Retrait";DataType:System.Single;TextAlign:RightCenter;TextAlignFixed:CenterCenter;ImageAlign:RightCenter;}	</value>
+  </data>
+  <data name="AC1GrilleIlot.Styles" xml:space="preserve">
+    <value>Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <metadata name="lblIlot.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnPiétonPlusRapide.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAEBJREFUWEft0CEO
+        ADAIA0D+/+nNkyUVICaulhLIVQkBAgQeAqelV6bziD49kPY9QIAAgf8F4ocKBAgQIEBgUeACVYgODw9+
+        UQoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="tipBulle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="btnPiétonPlus.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFZJREFUWEft1SES
+        ACAIRFHuf2lEE2UDOwTDZ8biKOILEEEggMCnAll1ba7xN+/jkS16BrUv7rxc06AABBBAAAGrfYp2a+Xa
+        HERWAdPZwXkEEEAAAVvgAEgCykRkd+6hAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnPiétonMoins.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1+AQAAAAAAAHYAAAAoAAAAGAAAABYAAAABAAQAAAAAAAAAAADEDgAAxA4AABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD//////4AA
+        AAAAAAAAAAAACAd3d3d3d3d3d3d3cA93d3d3d3d3d3d3cA+IiIiIiIiIiIiHcA+IiIiIiIiIiIiHcA+I
+        iIiIiIiID4iHcA+IiA+IiIiIiIiHcA+IgAD4iIiA+IiHcA+IgAD4iIgPiIiHcA+IiAAPiIAPiIiHcA+I
+        iIAA+AD4iIiHcA+IiIgAAA+IiIiHcA+IiIiAAPiIiIiHcA+IiIgAAA+IiIiHcA+IiIAA+A+IiIiHcA+I
+        gAAPiIAPiIiHcA+IAAD4iIgA+IiHcA+IAPiIiIiAD4iHcA+IiIiIiIiIiIiHcA+IiIiIiIiIiIiHcA//
+        ////////////cIAAAAAAAAAAAAAACA==
+</value>
+  </data>
+  <data name="AC1GrilleBranches.ColumnInfo" xml:space="preserve">
+    <value>8,1,0,0,0,85,Columns:0{Width:15;Name:"ID";AllowEditing:False;DataType:System.String;TextAlign:LeftCenter;}	1{Width:120;Name:"NomRue";Caption:"Nom de la rue";DataType:System.String;TextAlign:LeftCenter;}	2{Width:33;AllowSorting:False;Name:"Angle";Caption:"Angle";DataType:System.Single;}	3{Width:50;Name:"Longueur";Caption:"Longueur";DataType:System.Int16;}	4{Width:70;Name:"LargeurVoies";Caption:"Largeur voies";DataType:System.Single;}	5{Width:50;Name:"NbVoiesE";Caption:"Entrantes";DataType:System.Int16;}	6{Width:50;Name:"NbVoiesS";Caption:"Sortantes";DataType:System.Int16;}	7{Width:24;AllowSorting:False;Name:"Ilot";Caption:"Ilot";DataType:System.Boolean;ImageAlign:CenterCenter;}	</value>
+  </data>
+  <data name="AC1GrilleBranches.Styles" xml:space="preserve">
+    <value>Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <data name="btnTrajMoinsTout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhGAAYAPUAAAAAABUAACAAACcAACkAACoAAC4AAC8AADMAADcAAD0AAD4AAD8AAEYAAEgAAE0A
+        AGUAAGYAAIYAAIwAAI8AAJYAAJoAAJsAAKUAAKYAAKkAALMAAMkAANcAANgAANkAAOAAAOQAAOcAAOgA
+        AOkAAOoAAOwAAO4AAPYAAPcAAPgAAPkAAPoAAPsAAPwAAP0AAP4AAP8AAP//////////////////////
+        /////////////////////////////////yH5BAEAAD8ALAAAAAAYABgAAAadwJ9wSCwaj8ik8heLLY+A
+        YfNpBESZTuIKZE1aoyZYsfO4Kq0WUtHQoFoXGCKgQKH+AAjH1TpR2yEBZj8iYnYkFV9CLllPLiobiT8v
+        jEZNMTAsIZBfUSWFR5R3XaIafk+RQgkDE24AChcjlygfDYJIVgcSHlW2vBEcSAQMGSAuvAAcJ0ctHAKj
+        clcpn0QxK6JFz1OVoUPZ3Fh24eJJQQA7
+</value>
+  </data>
+  <data name="btnTrajToutes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAHNJREFUSEtjYBj2
+        4D8Dw38QpplHB9QCqliOz5BRC8AJZzSI8OYfWPDgymgkpSJkw9DZuFxBsgWkFgckWUCu4RSXU/iCjqqG
+        k+pDotQTG8bYfEk1CwglZaLyAT5FxPoSqxnEaCZGDU4HEqOZGDVExcegVQQA7qitU7oPzOwAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnTraverséeMoins.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhGAAYAPAAAAAAAP///yH5BAEAAAEALAAAAAAYABgAAAJCjI+py+3vAHxARrsqVhV2vjVa8lHa
+        h4bIOJLlesbyG8x27N5z1rWpesAFJTSQqmhkIGFAw7L2dBajMNdE1Lxqt9oCADs=
+</value>
+  </data>
+  <data name="btnTravProp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAGRJREFUWEftlEkK
+        ACAMA/v/T7scBBE9OhGbQs9NJiURHhP4gEBpHsbidubjEhFyAR25NAI8891BnMAud/QB5QJGDKsQ/B9y
+        C8jtfm2/TgOd5/ofb8JTD+BRoLn7mAmYgAlcI1ABgs1IuJoaQzMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnTraversée.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAE1JREFUSEtjYBgF
+        oyEwGgK4QuA/UAKEiQUkqYcpJscCgnqQDaeEjdXnlBiITS9NLcEbdzSNA5jNJKUKaIojGMHEJslRdaMh
+        MBoCJIYAADqOS7VnkyT0AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnTrajProp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAGRJREFUWEftlEkK
+        ACAMA/v/T7scBBE9OhGbQs9NJiURHhP4gEBpHsbidubjEhFyAR25NAI8891BnMAud/QB5QJGDKsQ/B9y
+        C8jtfm2/TgOd5/ofb8JTD+BRoLn7mAmYgAlcI1ABgs1IuJoaQzMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnTrajectoireMoins.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhGAAYAPUAAAAAABsAABwAACQAACoAAC4AAC8AADQAADcAAD0AAD8AAEEAAEYAAE0AAE8AAF8A
+        AGYAAIYAAIwAAI8AAKEAAKkAALcAAMkAAMsAANcAAOAAAOcAAOkAAOoAAO4AAPcAAPkAAPwAAP0AAP4A
+        AP8AAP//////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////yH5BAEAAD8ALAAAAAAYABgAAAZ6wJ9wSCwaj8ikEkkiLQFK
+        kugJRYI0gOoxqy1mGl1k9lhgLIXcIoAwOaPTv6yE4353N6P6EB5y6uNjPyJ+dVxZFB15dQgBDxgWDgsV
+        egoCB0SBZwADCUaZSVkGEVthngAQF2Kle1kXHqCfb0IfiqpqWk1/gEO5ur6/SEEAOw==
+</value>
+  </data>
+  <data name="btnTrajectoire.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAEVJREFUSEtjYBjR
+        4D8Dw38QplkgjFpAMGhHg2g0iAiGAF4FsBREcU5GNggbmyJnUs2VuFwxmpEIxs9oEA18EBF0wWBQAAAf
+        V1+hIy/7mgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="AC1GrilleFeux.ColumnInfo" xml:space="preserve">
+    <value>9,0,0,0,0,85,Columns:0{Width:36;AllowSorting:False;Name:"IDVoie";DataType:System.Char;TextAlign:CenterCenter;}	1{Width:150;AllowSorting:False;Name:"NomRue";Caption:"Nom de la rue";DataType:System.String;TextAlign:LeftCenter;}	2{Width:22;AllowSorting:False;Name:"ID";Caption:"LF";DataType:System.String;TextAlign:LeftCenter;}	3{Width:50;AllowSorting:False;Name:"Signal";Caption:"Signal";DataType:System.String;TextAlign:LeftCenter;}	4{Width:74;AllowSorting:False;Name:"SignalAnticipation";Caption:"Signal associé";}	5{Width:31;AllowSorting:False;Name:"NbVoies";Caption:"Voies";DataType:System.Int16;}	6{Width:30;AllowSorting:False;Name:"TAG";Caption:"TAG";DataType:System.Boolean;ImageAlign:CenterCenter;}	7{Width:30;AllowSorting:False;Name:"TD";Caption:"TD";DataType:System.Boolean;TextAlign:CenterCenter;ImageAlign:CenterCenter;}	8{Width:30;AllowSorting:False;Name:"TAD";Caption:"TAD";DataType:System.Boolean;TextAlign:CenterCenter;ImageAlign:CenterCenter;}	</value>
+  </data>
+  <data name="AC1GrilleFeux.Styles" xml:space="preserve">
+    <value>Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <data name="btnLigneFeuxMoins.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhGAAYAPUAAAAAAAQEDgQEDwoKJAsLJgwMKgwMKw4OMRAQNxAQORMTQBQURhcXTxcXUBoaWh0d
+        Yx8faSAgbCcngykpiikpjCoqjy0tly0tmTQ0sTU1szY2tzw8yjw8zD4+0UBA2UND4kND40ND5ERE50VF
+        6UhI80lJ9klJ+EpK+kpK+0tL/EtL/UtL/kxM////////////////////////////////////////////
+        /////////////////////////////////yH5BAEAAD8ALAAAAAAYABgAAAaKwJ9wSCwaj8ikcqkEMJcA
+        Z1N6jFKNUWYWe01ai4BCRaRafqzSRoQyWrHeSFbq9/1JJkS4US+MPi57LEVvLCspJhkBAgQWgYOFJyEZ
+        AwIQBgqORSsofVkaDF18RCQddT8bCFSiRQ5bQiUeCwQXIG5IpkQcCQcYU11Erly/YMGdT3RdxcdDysvO
+        z8dBADs=
+</value>
+  </data>
+  <data name="btnLigneFeux.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFxJREFUSEtjYBgF
+        oyEwvEPAx+f/f2RMkm9BGnFpQDeYZItgGghZgC5PSB9YPSFFFMkT8jox4Y3XATS3gOZBBIs0csOZkD6U
+        REHTZEpshiE5/RNr8Ki60RCgbwgAAIxHxImz0kFlAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnSignalMoins.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1+AQAAAAAAAHYAAAAoAAAAGAAAABYAAAABAAQAAAAAAAAAAADEDgAAxA4AABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD//////4AA
+        AAAAAAAAAAAACAd3d3d3d3d3d3d3cA93d3d3d3d3d3d3cA+IiIiIiIiIiIiHcA+IiIiIiIiIiIiHcA+I
+        iIiIiIiID4iHcA+IiA+IiIiIiIiHcA+IgAD4iIiA+IiHcA+IgAD4iIgPiIiHcA+IiAAPiIAPiIiHcA+I
+        iIAA+AD4iIiHcA+IiIgAAA+IiIiHcA+IiIiAAPiIiIiHcA+IiIgAAA+IiIiHcA+IiIAA+A+IiIiHcA+I
+        gAAPiIAPiIiHcA+IAAD4iIgA+IiHcA+IAPiIiIiAD4iHcA+IiIiIiIiIiIiHcA+IiIiIiIiIiIiHcA//
+        ////////////cIAAAAAAAAAAAAAACA==
+</value>
+  </data>
+  <data name="btnLigneFeuDescendre.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAEdJREFUOE9jYMAP
+        /hOQxysN0gzDZJkzUg1ADnVsYUAwUJE14WITjBFChlBkAEHNMAVkOx+fAUTbjssQigwgWTO6KygyAK9m
+        ABc8Qr4gZ5AzAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnLigneFeuMonter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFFJREFUOE9jYCAM
+        /hNWglsFSDNVDCDLEJjtZLsC3QCSXIFNM1UMIMoQXLYTHRaEDMDrCnRbkA2DpRaivIGsmGinY0uP2FxA
+        UsoeBgaA/Is31AFYT0K+jOz0QAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Ac1GrilleTraficPiétons.ColumnInfo" xml:space="preserve">
+    <value>6,0,0,0,0,95,Columns:0{Width:35;AllowSorting:False;Caption:"A";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	1{Width:35;Caption:"B";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	2{Width:35;Caption:"C";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	3{Width:35;Caption:"D";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	4{Width:35;Caption:"E";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	5{Width:35;Caption:"F";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	</value>
+  </data>
+  <data name="Ac1GrilleTraficPiétons.Styles" xml:space="preserve">
+    <value>Normal{Font:Microsoft Sans Serif, 9.75pt;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <data name="AC1GrilleTraficVéhicules.ColumnInfo" xml:space="preserve">
+    <value>8,1,0,0,0,95,Columns:0{Width:25;}	1{Width:35;AllowSorting:False;Caption:"A";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	2{Width:35;Caption:"B";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	3{Width:35;Caption:"C";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	4{Width:35;Caption:"D";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	5{Width:35;Caption:"E";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	6{Width:35;Caption:"F";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	7{Width:40;Caption:"TE";DataType:System.Int16;TextAlign:CenterCenter;TextAlignFixed:CenterBottom;}	</value>
+  </data>
+  <data name="AC1GrilleTraficVéhicules.Styles" xml:space="preserve">
+    <value>Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <data name="AC1GrillePhases.ColumnInfo" xml:space="preserve">
+    <value>4,1,0,0,0,85,Columns:0{Width:77;Name:"LigneFeu";Caption:"Lignes de feux";TextAlign:CenterCenter;TextAlignFixed:CenterCenter;}	1{Width:50;AllowSorting:False;Caption:"Phase 1";DataType:System.Boolean;TextAlign:CenterCenter;TextAlignFixed:CenterTop;ImageAlign:CenterCenter;}	2{Width:50;AllowSorting:False;Caption:"Phase 2";DataType:System.Boolean;TextAlign:CenterCenter;TextAlignFixed:CenterTop;ImageAlign:CenterCenter;}	3{Width:50;Caption:"Phase 3";Visible:False;DataType:System.Boolean;TextAlign:CenterCenter;TextAlignFixed:CenterCenter;ImageAlign:CenterCenter;}	</value>
+  </data>
+  <data name="AC1GrillePhases.Styles" xml:space="preserve">
+    <value>Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <data name="btnLigneFeuDescendrePlans.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAEdJREFUOE9jYMAP
+        /hOQxysN0gzDZJkzUg1ADnVsYUAwUJE14WITjBFChlBkAEHNMAVkOx+fAUTbjssQigwgWTO6KygyAK9m
+        ABc8Qr4gZ5AzAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnLigneFeuMonterPlans.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFFJREFUOE9jYCAM
+        /hNWglsFSDNVDCDLEJjtZLsC3QCSXIFNM1UMIMoQXLYTHRaEDMDrCnRbkA2DpRaivIGsmGinY0uP2FxA
+        UsoeBgaA/Is31AFYT0K+jOz0QAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="AC1GrilleAntagonismes.ColumnInfo" xml:space="preserve">
+    <value>3,0,0,0,0,85,Columns:0{Width:75;AllowSorting:False;Name:"Courant1";Caption:"Courant1";AllowEditing:False;DataType:System.String;TextAlign:CenterCenter;TextAlignFixed:CenterCenter;}	1{Width:78;AllowSorting:False;Name:"Courant2";Caption:"Courant2";AllowEditing:False;DataType:System.String;TextAlign:CenterCenter;TextAlignFixed:CenterCenter;}	2{Width:70;AllowSorting:False;Name:"ConflitAdmis";Caption:"Conflit admis";DataType:System.Boolean;ImageAlign:CenterCenter;}	</value>
+  </data>
+  <data name="AC1GrilleAntagonismes.Styles" xml:space="preserve">
+    <value>Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <data name="Ac1GrilleSécurité.Styles" xml:space="preserve">
+    <value>Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	</value>
+  </data>
+  <metadata name="tipPicDessin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>105, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>28</value>
+  </metadata>
+</root>

@@ -1,0 +1,342 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5C38CBB-16EE-46BD-99CD-BAD40DBF2B5E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>DiagFeux.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>DiagFeux</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Text</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>DiagFeux</RootNamespace>
+    <StartupObject>DiagFeux.MDIDiagfeux</StartupObject>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DiagFeux.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DIAGFEUX = True</DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DiagFeux.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DIAGFEUX = True</DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Common">
+      <Name>C1.Common</Name>
+      <HintPath>obj\C1.Common.dll</HintPath>
+      <AssemblyFolderKey>hklm\dn\c1studioasp</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid">
+      <Name>C1.Win.C1FlexGrid</Name>
+      <HintPath>obj\c1.win.c1flexgrid.dll</HintPath>
+      <AssemblyFolderKey>hklm\dn\c1studioasp</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Branche.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Carrefour.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Diagfeux.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Diagfeux.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dlgCarGen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgFDP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgImportDXF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgImpressions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgInfoImpressions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgModeTableur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgNouveauPlanFeux.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgParamétrage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgScénario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgTrajPiéton.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgTrajVeh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exception.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FondDePlan.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formules.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmAideCommande.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAntagonisme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAPropos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarrefour.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiagnostic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDéfileDXF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKey.designer.vb">
+      <DependentUpon>frmKey.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKey.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphique.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GrilleDiagfeux.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ilot.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LecDXF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LigneFeux.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MDIDiagfeux.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Métier.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Outils.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PassagePiéton.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Phase.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlanFeux.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Protection.vb" />
+    <Compile Include="SignalFeu.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Trafic.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Trajectoire.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Variante.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Voie.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="DiagFeux.ico" />
+    <Content Include="Diagfeux.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Diagfeux.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Diagfeux.xsc">
+      <DependentUpon>Diagfeux.xsd</DependentUpon>
+    </None>
+    <None Include="Diagfeux.xsx">
+      <DependentUpon>Diagfeux.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="dlgCarGen.resx">
+      <DependentUpon>dlgCarGen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgFDP.resx">
+      <DependentUpon>dlgFDP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgImportDXF.resX">
+      <DependentUpon>dlgImportDXF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgImpressions.resx">
+      <DependentUpon>dlgImpressions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgInfoImpressions.resx">
+      <DependentUpon>dlgInfoImpressions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgModeTableur.resx">
+      <DependentUpon>dlgModeTableur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgNouveauPlanFeux.resx">
+      <DependentUpon>dlgNouveauPlanFeux.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgParamétrage.resx">
+      <DependentUpon>dlgParamétrage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgScénario.resx">
+      <DependentUpon>dlgScénario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgTrajPiéton.resx">
+      <DependentUpon>dlgTrajPiéton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgTrajVeh.resx">
+      <DependentUpon>dlgTrajVeh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAideCommande.resx">
+      <DependentUpon>frmAideCommande.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAntagonisme.resx">
+      <DependentUpon>frmAntagonisme.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAPropos.resx">
+      <DependentUpon>frmAPropos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarrefour.resx">
+      <DependentUpon>frmCarrefour.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiagnostic.resx">
+      <DependentUpon>frmDiagnostic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDlg.resx">
+      <DependentUpon>frmDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDéfileDXF.resX">
+      <DependentUpon>frmDéfileDXF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKey.resX">
+      <DependentUpon>frmKey.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrilleDiagfeux.resx">
+      <DependentUpon>GrilleDiagfeux.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="MDIDiagfeux.resx">
+      <DependentUpon>MDIDiagfeux.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IsLicenseDotNet">
+      <Guid>{5D8AA7FA-5543-4305-AB35-391F2C0A30C8}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

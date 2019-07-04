@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Ce fichier est automatiquement généré par le Concepteur de schéma XML. Il contient des informations de disposition pour les composants dans l'aire du concepteur.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="170046" viewPortTop="0" zoom="100">
+    <SchémaACONDIA_XmlElement left="317" top="254" width="5292" height="2963" selected="0" zOrder="1" index="0" expanded="1">
+        <ref_x003D_Paramétrage_XmlElement left="-11535" top="3725" width="5292" height="2963" selected="0" zOrder="17" index="0" expanded="0" />
+        <ParamFixe_XmlElement left="-5609" top="3725" width="5292" height="2963" selected="0" zOrder="19" index="1" expanded="1">
+            <TempsMaxAttente_XmlElement left="-5609" top="7196" width="5292" height="847" selected="0" zOrder="21" index="8" expanded="1">
+                <_x0028_TempsMaxAttente_x0029__XmlSimpleType left="-5609" top="8551" width="5292" height="2963" selected="0" zOrder="23" index="0" expanded="1" />
+            </TempsMaxAttente_XmlElement>
+        </ParamFixe_XmlElement>
+        <TableCycleCapacité_XmlElement left="317" top="3725" width="5292" height="2963" selected="0" zOrder="2" index="2" expanded="1">
+            <DuréeCycle_XmlElement left="317" top="7196" width="5292" height="2963" selected="0" zOrder="5" index="0" expanded="1" />
+        </TableCycleCapacité_XmlElement>
+        <ref_x003D_Carrefour_XmlElement left="6243" top="3725" width="5292" height="2963" selected="0" zOrder="8" index="3" expanded="0" />
+        <ref_x003D_DXF_XmlElement left="12169" top="3725" width="5292" height="2963" selected="0" zOrder="10" index="4" expanded="0" />
+    </SchémaACONDIA_XmlElement>
+    <Branche_XmlElement left="29947" top="254" width="5292" height="2963" selected="0" zOrder="13" index="1" expanded="1">
+        <Ilot_XmlElement left="18095" top="3725" width="5292" height="2963" selected="0" zOrder="14" index="3" expanded="1" />
+        <ref_x003D_Voie_XmlElement left="24021" top="3725" width="5292" height="2963" selected="0" zOrder="25" index="4" expanded="0" />
+        <ptFlechesTrafic_XmlElement left="29947" top="3725" width="5292" height="2963" selected="0" zOrder="28" index="6" expanded="0" />
+        <Origine_XmlElement left="35873" top="3725" width="5292" height="2963" selected="0" zOrder="30" index="7" expanded="0" />
+        <ref_x003D_Passage_XmlElement left="41799" top="3725" width="5292" height="2963" selected="0" zOrder="32" index="8" expanded="0" />
+    </Branche_XmlElement>
+    <LigneDeFeux_XmlElement left="53651" top="254" width="5292" height="2963" selected="0" zOrder="34" index="2" expanded="1">
+        <Signal_XmlElement left="47725" top="3725" width="5292" height="2963" selected="0" zOrder="35" index="1" expanded="1" />
+        <RougeDégagement_XmlElement left="53651" top="3725" width="5292" height="2963" selected="0" zOrder="37" index="2" expanded="1" />
+        <Incompatible_XmlElement left="59577" top="3725" width="5292" height="2963" selected="0" zOrder="39" index="3" expanded="1" />
+    </LigneDeFeux_XmlElement>
+    <Point_XmlComplexType left="65503" top="254" width="5292" height="2963" selected="0" zOrder="41" index="3" expanded="1" />
+    <PointF_XmlComplexType left="71429" top="254" width="5292" height="2963" selected="0" zOrder="42" index="4" expanded="1" />
+    <Voie_XmlElement left="77355" top="254" width="5292" height="2963" selected="0" zOrder="43" index="5" expanded="1" />
+    <Trajectoire_XmlElement left="92170" top="254" width="5292" height="2963" selected="0" zOrder="44" index="6" expanded="1">
+        <Piétons_XmlElement left="83281" top="3725" width="5292" height="2963" selected="0" zOrder="45" index="0" expanded="1" />
+        <Véhicules_XmlElement left="95133" top="3725" width="5292" height="2963" selected="0" zOrder="47" index="1" expanded="1">
+            <TypeCourant_XmlElement left="89207" top="7196" width="5292" height="847" selected="0" zOrder="49" index="2" expanded="1">
+                <_x0028_TypeCourant_x0029__XmlSimpleType left="89207" top="8551" width="5292" height="2963" selected="0" zOrder="51" index="0" expanded="1" />
+            </TypeCourant_XmlElement>
+            <NatureCourant_XmlElement left="95133" top="7196" width="5292" height="847" selected="0" zOrder="53" index="3" expanded="1">
+                <_x0028_NatureCourant_x0029__XmlSimpleType left="95133" top="8551" width="5292" height="2963" selected="0" zOrder="55" index="0" expanded="1" />
+            </NatureCourant_XmlElement>
+            <PointManuel_XmlElement left="101059" top="7196" width="5292" height="2963" selected="0" zOrder="57" index="5" expanded="0" />
+        </Véhicules_XmlElement>
+    </Trajectoire_XmlElement>
+    <Passage_XmlElement left="106985" top="254" width="5292" height="2963" selected="0" zOrder="59" index="7" expanded="1">
+        <Point_XmlElement left="106985" top="3725" width="5292" height="2963" selected="0" zOrder="60" index="0" expanded="0" />
+    </Passage_XmlElement>
+    <Variante_XmlElement left="142541" top="254" width="5292" height="2963" selected="0" zOrder="62" index="8" expanded="1">
+        <ParamDessin_XmlElement left="115874" top="3725" width="5292" height="2963" selected="0" zOrder="63" index="1" expanded="1">
+            <OrigineReelle_XmlElement left="112911" top="7196" width="5292" height="2963" selected="0" zOrder="65" index="1" expanded="0" />
+            <Taille_XmlElement left="118837" top="7196" width="5292" height="2963" selected="0" zOrder="67" index="2" expanded="0" />
+        </ParamDessin_XmlElement>
+        <Affichage_XmlElement left="127726" top="3725" width="5292" height="2963" selected="0" zOrder="69" index="2" expanded="1">
+            <Nord_XmlElement left="124763" top="7196" width="5292" height="2963" selected="0" zOrder="71" index="0" expanded="1">
+                <pNord_XmlElement left="124763" top="10667" width="5292" height="2963" selected="0" zOrder="73" index="0" expanded="0" />
+            </Nord_XmlElement>
+            <SymEchelle_XmlElement left="130689" top="7196" width="5292" height="2963" selected="0" zOrder="75" index="1" expanded="1">
+                <pSymEchelle_XmlElement left="130689" top="10667" width="5292" height="2963" selected="0" zOrder="77" index="0" expanded="0" />
+            </SymEchelle_XmlElement>
+        </Affichage_XmlElement>
+        <FondPlan_XmlElement left="136615" top="3725" width="5292" height="2963" selected="0" zOrder="79" index="4" expanded="1">
+            <MonDXF_XmlElement left="136615" top="7196" width="5292" height="2963" selected="0" zOrder="81" index="4" expanded="1" />
+        </FondPlan_XmlElement>
+        <ref_x003D_Branche_XmlElement left="142541" top="3725" width="5292" height="2963" selected="0" zOrder="83" index="5" expanded="0" />
+        <ref_x003D_LigneDeFeux_XmlElement left="148467" top="3725" width="5292" height="2963" selected="0" zOrder="85" index="6" expanded="0" />
+        <ref_x003D_Trajectoire_XmlElement left="154393" top="3725" width="5292" height="2963" selected="0" zOrder="87" index="7" expanded="0" />
+        <Antagonisme_XmlElement left="160319" top="3725" width="5292" height="2963" selected="0" zOrder="89" index="8" expanded="1">
+            <pAntago_XmlElement left="160319" top="7196" width="5292" height="2963" selected="0" zOrder="91" index="3" expanded="0" />
+        </Antagonisme_XmlElement>
+        <ref_x003D_PlanFeux_XmlElement left="166245" top="3725" width="5292" height="2963" selected="0" zOrder="93" index="9" expanded="0" />
+        <ref_x003D_Trafic_XmlElement left="172171" top="3725" width="5292" height="2963" selected="0" zOrder="95" index="10" expanded="0" />
+    </Variante_XmlElement>
+    <Phase_XmlElement left="178097" top="254" width="5292" height="2963" selected="0" zOrder="97" index="9" expanded="1">
+        <IDLigneFeux_XmlElement left="178097" top="3725" width="5292" height="2963" selected="0" zOrder="98" index="1" expanded="1" />
+    </Phase_XmlElement>
+    <PlanFeux_XmlElement left="189949" top="254" width="5292" height="2963" selected="0" zOrder="100" index="10" expanded="1">
+        <ref_x003D_Phase_XmlElement left="184023" top="3725" width="5292" height="2963" selected="0" zOrder="101" index="2" expanded="0" />
+        <Incompatibles_XmlElement left="189949" top="3725" width="5292" height="2963" selected="0" zOrder="103" index="4" expanded="1" />
+        <RougesDégagement_XmlElement left="195875" top="3725" width="5292" height="2963" selected="0" zOrder="105" index="5" expanded="1" />
+    </PlanFeux_XmlElement>
+    <Trafic_XmlElement left="201801" top="254" width="5292" height="2963" selected="0" zOrder="107" index="11" expanded="1" />
+    <Paramétrage_XmlElement left="210690" top="254" width="5292" height="2963" selected="0" zOrder="108" index="12" expanded="1">
+        <VitesseVéhicules_XmlElement left="207727" top="3725" width="5292" height="847" selected="0" zOrder="109" index="5" expanded="1">
+            <_x0028_VitesseVéhicules_x0029__XmlSimpleType left="207727" top="5080" width="5292" height="2963" selected="0" zOrder="111" index="0" expanded="1" />
+        </VitesseVéhicules_XmlElement>
+        <VitesseVélos_XmlElement left="213653" top="3725" width="5292" height="847" selected="0" zOrder="113" index="6" expanded="1">
+            <_x0028_VitesseVélos_x0029__XmlSimpleType left="213653" top="5080" width="5292" height="2963" selected="0" zOrder="115" index="0" expanded="1" />
+        </VitesseVélos_XmlElement>
+    </Paramétrage_XmlElement>
+    <AttribuGraphique_XmlComplexType left="219579" top="254" width="5292" height="2963" selected="0" zOrder="117" index="13" expanded="1" />
+    <DXF_XmlElement left="249209" top="254" width="5292" height="2963" selected="0" zOrder="118" index="14" expanded="1">
+        <Calque_XmlElement left="225505" top="3725" width="5292" height="2963" selected="0" zOrder="119" index="0" expanded="1" />
+        <Bloc_XmlElement left="246246" top="3725" width="5292" height="2963" selected="0" zOrder="121" index="1" expanded="1">
+            <LIGNE_XmlElement left="231431" top="7196" width="5292" height="2963" selected="0" zOrder="123" index="0" expanded="1">
+                <PA_XmlElement left="231431" top="10667" width="5292" height="2963" selected="0" zOrder="125" index="1" expanded="0" />
+            </LIGNE_XmlElement>
+            <ARC_XmlElement left="237357" top="7196" width="5292" height="2963" selected="0" zOrder="127" index="1" expanded="1">
+                <CentreArc_XmlElement left="237357" top="10667" width="5292" height="2963" selected="0" zOrder="129" index="1" expanded="0" />
+            </ARC_XmlElement>
+            <CERCLE_XmlElement left="243283" top="7196" width="5292" height="2963" selected="0" zOrder="131" index="2" expanded="1">
+                <CentreCercle_XmlElement left="243283" top="10667" width="5292" height="2963" selected="0" zOrder="133" index="1" expanded="0" />
+            </CERCLE_XmlElement>
+            <POLYARC_XmlElement left="249209" top="7196" width="5292" height="2963" selected="0" zOrder="135" index="3" expanded="1">
+                <PI_XmlElement left="249209" top="10667" width="5292" height="2963" selected="0" zOrder="137" index="1" expanded="0" />
+            </POLYARC_XmlElement>
+            <SPLINE_XmlElement left="255135" top="7196" width="5292" height="2963" selected="0" zOrder="139" index="4" expanded="1">
+                <PtDessiné_XmlElement left="255135" top="10667" width="5292" height="2963" selected="0" zOrder="141" index="1" expanded="0" />
+            </SPLINE_XmlElement>
+            <INSERT_XmlElement left="261061" top="7196" width="5292" height="2963" selected="0" zOrder="143" index="5" expanded="1">
+                <pInsertion_XmlElement left="261061" top="10667" width="5292" height="2963" selected="0" zOrder="145" index="2" expanded="0" />
+            </INSERT_XmlElement>
+        </Bloc_XmlElement>
+        <Limites_XmlElement left="269950" top="3725" width="5292" height="2963" selected="0" zOrder="147" index="2" expanded="1">
+            <pMin_XmlElement left="266987" top="7196" width="5292" height="2963" selected="0" zOrder="149" index="0" expanded="0" />
+            <pMax_XmlElement left="272913" top="7196" width="5292" height="2963" selected="0" zOrder="151" index="1" expanded="0" />
+        </Limites_XmlElement>
+    </DXF_XmlElement>
+    <Pt_XmlComplexType left="278839" top="254" width="5292" height="2963" selected="0" zOrder="153" index="15" expanded="1">
+        <P_XmlElement left="278839" top="3725" width="5292" height="2963" selected="0" zOrder="154" index="0" expanded="0" />
+    </Pt_XmlComplexType>
+    <Carrefour_XmlElement left="290691" top="254" width="5292" height="2963" selected="0" zOrder="156" index="16" expanded="1">
+        <ref_x003D_Variante_XmlElement left="284765" top="3725" width="5292" height="2963" selected="0" zOrder="157" index="0" expanded="0" />
+        <Propriétés_XmlElement left="293654" top="3725" width="5292" height="2963" selected="0" zOrder="159" index="1" expanded="1">
+            <NbBranches_XmlElement left="290691" top="7196" width="5292" height="847" selected="0" zOrder="161" index="0" expanded="1">
+                <_x0028_NbBranches_x0029__XmlSimpleType left="290691" top="8551" width="5292" height="2963" selected="0" zOrder="163" index="0" expanded="1" />
+            </NbBranches_XmlElement>
+            <Centre_XmlElement left="296617" top="7196" width="5292" height="2963" selected="0" zOrder="165" index="10" expanded="0" />
+        </Propriétés_XmlElement>
+    </Carrefour_XmlElement>
+</XSDDesignerLayout>
